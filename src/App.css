@@ -1,0 +1,562 @@
+.App {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  height: 480px;
+  max-width: 720px;
+  width: 90%;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px grey;
+  overflow: hidden;
+}
+.line{
+  background-color: black;
+  height: 4px;
+  width: 3rem;
+}
+#card{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  z-index: 5;
+  overflow: hidden;
+
+}
+#card-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 1;
+}
+#card-header h2{
+  margin: 0;
+}
+.details_card{
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  box-sizing: border-box;
+
+}
+#btn{
+  border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 25px;
+  color: purple;
+}
+#CB{
+  font-size: 1rem;
+  width: 100%;
+}
+.details_card_div{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: end;
+  width: 50%;
+  box-sizing: border-box;
+  color: white;
+}
+.details_card_div h1{
+  margin: 0;
+}
+.title{
+  color: purple;
+}
+.input-div{
+  position: relative;
+  background-color: transparent;
+  margin: 10px ;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.input-div input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+.input-div label{
+  position: absolute;
+  left: 0px;
+  background-color:transparent;
+  color: #999;
+  font-size: 16px;
+  transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out; 
+  pointer-events: none;
+}
+.input-div input:focus + label{
+    top: -15px;
+    font-size: 12px;
+    color: #58d9a1; 
+}
+.input-div:focus-within {
+  border-bottom: 2px solid #58d9a1;
+}
+.input-div:focus-within span {
+  color: #58d9a1;
+}
+.input-section{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0px;
+  padding: 0px 40px;
+  box-sizing: border-box;
+}
+#btn-section{
+  width: 100%;
+  margin: 15px 0px;
+  padding: 0px 40px;
+  box-sizing: border-box;
+}
+
+.LI{
+  width: 100%;
+}
+.SU{
+  width: 100%;
+}
+#btn:hover {
+  background-color: #c5eceb;
+}
+
+.polygon-background {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  max-width: 720px;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 6px;
+  z-index: 0;
+}
+
+.polygon-background.active {
+  animation: animationForward 1s ease-in forwards;
+}
+.polygon-background.toggle {
+  animation: animationBackward 1s ease-in forwards;
+}
+@keyframes animationForward {
+  0% {
+    clip-path: polygon(0 0, 70% 0, 70% 0, 20% 100%,0% 100%);
+  }
+  15% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 20% 100%,0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%,0% 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%,0% 0%);
+  }
+  100% {
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 80% 100%, 35% 0%);
+  }
+}
+
+@keyframes animationBackward {
+  0% {
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 80% 100%, 35% 0%);
+  }
+  15% {
+    clip-path: polygon(0 0, 100% 0,100% 100%,80% 100%,0 0);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%,60% 100%,0 100%);
+  }
+  85% {
+    clip-path: polygon(0 0, 100% 0, 100% 0%,20% 100%,0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 70% 0, 70% 0, 20% 100%,0% 100%);
+  }
+}
+
+
+/* //signup section */
+.sign_up_card_container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+.Sign_up_card{
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+
+}
+.sign_up_details{
+  position: absolute;
+  left: 0;
+  width: 50%;
+  text-align: start;
+  padding: 0px 200px 0px 40px;
+  box-sizing: border-box;
+  color: white;
+  z-index: 1;
+  opacity: 0;
+
+}
+/* //login card section */
+
+
+.login_card_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  opacity: 1;
+}
+.login_card{
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  
+}
+.login_details{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  text-align: end;
+  color: white;
+  padding: 0px 40px 0px 200px;
+  box-sizing: border-box;
+  z-index: 1;
+  opacity: 1;
+}
+
+
+/* Sing up button animation */
+/* login card */
+.login_card.toggle {
+  animation: left_hidding_move 1s ease-in-out forwards ;
+}
+.login_card.toggle{
+  animation-delay: .4s ;
+}
+.card-header-login_card.toggle,
+.userN.toggle,
+.userPass.toggle,
+.btn-section-login_card.toggle{
+  animation: left_hidding_move 1s ease-in-out forwards ;
+}
+.card-header-login_card.toggle{
+  animation-delay: .1s;
+}
+.userN.toggle{
+  animation-delay: .2s;
+}
+.userPass.toggle{
+  animation-delay: .3s;
+}
+.btn-section-login_card.toggle{
+  animation-delay: .4s;
+}
+/* sign up card */
+.Sign_up_card.toggle{
+  animation: right_popup_move 1s ease-in-out forwards;
+}
+.card-header-Sign_up_card.toggle,
+.userN2.toggle,
+.userE.toggle,
+.userPass2.toggle,
+.btn-section-Sign_up_card.toggle{
+  animation: right_popup_move 1s ease-in-out forwards ;
+}
+.card-header-Sign_up_card.toggle{
+  animation-delay: .1s;
+}
+.userN2.toggle{
+  animation-delay: .2s;
+}
+.userE.toggle{
+  animation-delay:.3s ;
+}
+.userPass2.toggle{
+  animation-delay: .4s;
+}
+.btn-section-Sign_up_card.toggle{
+  animation-delay: .5s;
+}
+
+/* indexing for container*/
+.sign_up_card_container.toggle{
+  z-index: 5;
+}
+.login_card_container.toggle{
+  z-index: 0;
+}
+/*details card section  */
+.login_details.toggle{
+  animation: right_hidding_move 1s ease-in-out forwards ;
+  animation-delay: .4s;
+}
+.login_details-h1.toggle,
+.login_details-p.toggle,
+.login_details-button.toggle{
+  animation: right_hidding_move 1s ease-in-out forwards ;
+}
+.login_details-h1.toggle{
+  animation-delay: .1s ;
+}
+.login_details-p.toggle{
+  animation-delay: .2s;
+}
+.login_details-button.toggle{
+  animation-delay: .4s;
+}
+
+
+/* sign up  details aimation */
+.sign_up_details.toggle{
+  animation:left_popup_move 1s ease-in-out forwards ;
+}
+.sign_up_details-h1.toggle,
+.sign_up_details-p.toggle,
+.sign_up_details-button.toggle{
+  animation: left_popup_move 1s ease-in-out forwards ;
+}
+.sign_up_details-h1.toggle{
+  animation-delay: .1s ;
+}
+.sign_up_details-p.toggle{
+  animation-delay: .2s;
+}
+.sign_up_details-button.toggle{
+  animation-delay: .4s;
+}
+
+/* Login button animation section */
+
+/* login card */
+.login_card.active {
+  animation: left_popup_move 1s ease-in-out forwards ;
+}
+.card-header-login_card.active,
+.userN.active,
+.userPass.active,
+.btn-section-login_card.active{
+  animation: left_popup_move 1s ease-in-out forwards ;
+}
+.card-header-login_card.active{
+  animation-delay: .1s;
+}
+.userN.active{
+  animation-delay: .2s;
+}
+.userPass.active{
+  animation-delay: .3s;
+}
+.btn-section-login_card.active{
+  animation-delay: .4s;
+}
+/* sign up card */
+.Sign_up_card.active{
+  animation: right_hidding_move 1s ease-in-out forwards;
+}
+
+.card-header-Sign_up_card.active,
+.userN2.active,
+.userE.active,
+.userPass2.active,
+.btn-section-Sign_up_card.active{
+  animation: right_hidding_move 1s ease-in-out forwards;
+}
+
+.userN2.active{
+  animation-delay: .2s;
+}
+.userE.active{
+  animation-delay: .3s;
+}
+.userPass2.active{
+  animation-delay: .4s;
+}
+.btn-section-Sign_up_card.active{
+  animation-delay: .5s;
+}
+
+/*details card section  */
+.login_details.active{
+  animation: right_popup_move 1s ease-in-out forwards ;
+}
+.login_details-h1.active,
+.login_details-p.active,
+.login_details-button.active{
+  animation: right_popup_move 1s ease-in-out forwards ;
+}
+.login_details-h1.active{
+  animation-delay: .1s ;
+}
+.login_details-p.active{
+  animation-delay: .2s;
+}
+.login_details-button.active{
+  animation-delay: .4s;
+}
+
+/* sign up  details aimation */
+.sign_up_details.active{
+  animation:left_hidding_move 1s ease-in-out forwards ;
+}
+
+.sign_up_details-h1.active,
+.sign_up_details-p.active,
+.sign_up_details-button.active{
+  animation: left_hidding_move 1s ease-in-out forwards ;
+}
+.sign_up_details-h1.active{
+  animation-delay: .1s ;
+}
+.sign_up_details-p.active{
+  animation-delay: .2s;
+}
+.sign_up_details-button.active{
+  animation-delay: .4s;
+}
+
+/* indexing for container*/
+.sign_up_card_container.active{
+  z-index: 0;
+}
+.login_card_container.active{
+  z-index: 5;
+}
+@keyframes right_hidding_move{
+  0%{
+    opacity: 1;
+    z-index: 2;
+  }
+  25%{
+    opacity: .2;
+    z-index: 1;
+    transform: translateX(50%);
+    filter: blur(10px);
+    
+  }
+  50%{
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    filter: blur(0px);
+  }
+  100%{
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+@keyframes left_hidding_move{
+  0%{
+    opacity: 1;
+    z-index: 2;
+  }
+  25%{
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-50%);
+    filter: blur(10px);
+  }
+  50%{
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    filter: blur(0);
+  }
+  100%{
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+@keyframes right_popup_move{
+  0%{
+    opacity: 0;
+    z-index: 1;
+  }
+  50%{
+    opacity: 0;
+    z-index: 0;
+    transform: translateX(100%);
+  }
+  75%{
+    opacity: .2;
+    z-index: 2;
+    transform: translateX(50%);
+    filter: blur(5px);
+  }
+  100%{
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+@keyframes left_popup_move{
+  0%{
+    opacity: 0;
+    z-index: 1;
+  }
+  50%{
+    opacity: 0;
+    z-index: 0;
+    transform: translateX(-100%);
+  }
+  75%{
+    opacity: .2;
+    z-index: 2;
+    transform: translateX(-50%);
+    filter: blur(5px);
+  }
+  100%{
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+
+
