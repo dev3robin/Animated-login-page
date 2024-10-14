@@ -2,7 +2,7 @@
       "name": "loginform",
       "version": "0.1.0",
       "private": true,
-      "homepage": "https://dev3robin.github.io/deploy",
+      "homepage": "https://dev3robin.github.io/Animated-login-page",
       "dependencies": {
             "@emotion/react": "^11.13.3",
             "@emotion/styled": "^11.13.0",
