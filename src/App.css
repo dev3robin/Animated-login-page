@@ -57,11 +57,9 @@
 }
 #btn{
   border: none;
-  background-color: transparent;
   padding: 10px 20px;
-  box-shadow: 1px 1px 5px grey;
+  box-shadow: 1px 1px 5px rgb(187, 181, 181);
   border-radius: 25px;
-  color: purple;
 }
 #CB{
   font-size: 1rem;
@@ -82,7 +80,7 @@
   margin: 0;
 }
 .title{
-  color: purple;
+  color: black;
 }
 .input-div{
   position: relative;
@@ -137,14 +135,15 @@
   box-sizing: border-box;
 }
 
+.SU,
 .LI{
   width: 100%;
-}
-.SU{
-  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
 }
 #btn:hover {
-  background-color: #c5eceb;
+  background-color: rgb(210, 219, 226);
 }
 
 .polygon-background {
