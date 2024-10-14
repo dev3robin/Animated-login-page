@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/deploy/static/css/main.13f79054.css",
-    "main.js": "/deploy/static/js/main.c1ef718d.js",
-    "index.html": "/deploy/index.html",
-    "main.13f79054.css.map": "/deploy/static/css/main.13f79054.css.map",
-    "main.c1ef718d.js.map": "/deploy/static/js/main.c1ef718d.js.map"
+    "main.css": "/Animated-login-page/static/css/main.13f79054.css",
+    "main.js": "/Animated-login-page/static/js/main.c1ef718d.js",
+    "index.html": "/Animated-login-page/index.html",
+    "main.13f79054.css.map": "/Animated-login-page/static/css/main.13f79054.css.map",
+    "main.c1ef718d.js.map": "/Animated-login-page/static/js/main.c1ef718d.js.map"
   },
   "entrypoints": [
     "static/css/main.13f79054.css",
